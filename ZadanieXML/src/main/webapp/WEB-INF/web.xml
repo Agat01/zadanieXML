@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+ xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" 
+ id="WebApp_ID" version="4.0">
+  <display-name>Zadanie4system</display-name>
+  <welcome-file-list>
+    <welcome-file>/</welcome-file>
+    <welcome-file>strona.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  	<servlet-name>FormularzServlet</servlet-name>
+  	<servlet-class>FormularzServlet</servlet-class>
+  	<multipart-config>
+        <location>C:/Users/User/eclipse-workspace3/Zadanie4System/tmp</location>
+        <max-file-size>10485760</max-file-size> <!-- 10 MB -->
+<max-request-size>10485760</max-request-size> <!-- 10 MB -->
+        <file-size-threshold>1048576</file-size-threshold>
+    </multipart-config>
+  </servlet>
+<jsp-config>
+    <jsp-property-group>
+        <url-pattern>*.jsp</url-pattern>
+        <page-encoding>UTF-8</page-encoding>
+    </jsp-property-group>
+</jsp-config>
+
+</web-app>
